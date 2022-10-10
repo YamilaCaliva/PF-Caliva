@@ -1,0 +1,10 @@
+@mixin size ($width, $height) {
+    height: $height;
+    width: $width;
+}
+
+image{
+    @include size(300px, 250px);
+    border: 8px;
+    margin-top: 15px;
+}

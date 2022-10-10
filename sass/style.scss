@@ -1,68 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
-
-*{
-
-    padding: 0;
-    margin: 0;
-
-}
-
-body{
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-    font-weight: bolder;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-
-.logo{
-    display: flex;
-    align-items: flex-end;
-    margin-right: 10px;
-}
-
-.logo img{
-    height: 100px;
-    padding-bottom: 10px;
-}
-
-
-section h1{
-    text-align: center;
-    justify-content: center;
-    font-family: 'Poppins', sans-serif;
-    font-weight: bolder;
-    font-size: 20px;
-    color: black;
-    align-items: center;
-    position: absolute;
-}
-
-.primertitulo{
-    color: black;
-    text-align: center;
-}
-
-.col image{
-    width: 150%;
-    margin-top: 10px;
-    padding-left: 200px;
-    text-align: center;
-}
-
-.row{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 10px;
-}
-
-.col{
-    padding: 10px;
-}
+@import "fuentes";
+@import "generales";
+@import "imagenes";
+@import "operaciones";
 
 .btn{
     font-weight: bolder;
@@ -158,12 +97,6 @@ footer{
     gap: 15px;
 }
 
-image{
-    width: 300px;
-    height: 250px;
-    border: 8px;
-    margin-top: 15px;
-}
 
 .envoltura{
     display: grid;
@@ -171,13 +104,14 @@ image{
     width: 50%;
     height: 100vh;
     grid-template-columns: repeat(2,200px);
-    grid-template-rows: 1fr repeat(4,1fr);
+    grid-template-rows: 1fr repeat(5,1fr);
     grid-template-areas: 
     "item-3"
     "item-4"
     "item-5"
     "item-1"
     "item-2"
+    "item-6"
     ;
     column-gap: 10px;
     align-content: center;
@@ -215,6 +149,7 @@ image{
 .item-4 {
     grid-area: item-4;
     padding-top: 20px;
+    padding-bottom: 40px;
     font-size: 10px;
     text-align: justify;
 }
@@ -226,6 +161,12 @@ image{
     justify-content: center;
 }
 
+.item-6 {
+    grid-area: item-6;
+    justify-items: center;
+    padding-right: 50px;
+}
+
 @media(min-width:768px){
     .envoltura{
         display: grid;
@@ -235,12 +176,13 @@ image{
         width: 100%;
         height: 100vh;
         grid-template-columns: repeat(2,600px);
-        grid-template-rows: 1fr repeat(4,1fr);
+        grid-template-rows: 1fr repeat(5,1fr);
         grid-template-areas: 
         "item-3 item-4"
         "item-3 item-5"
         "item-3 item-1"
         "item-3 item-2"
+        "item-3 item-6"
         ;
         column-gap: 70px;
         align-content: center;
@@ -275,5 +217,10 @@ image{
         align-items: center;
         justify-content: center;
         text-align: justify;
+    }
+
+    .item-6 {
+        grid-area: item-6;
+        padding-right: 100px;
     }
 }
